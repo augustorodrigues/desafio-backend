@@ -2,6 +2,7 @@ import express from 'express';
 import routes from './routes';
 
 class App {
+    server: any;
     constructor() {
         this.server = express();
         

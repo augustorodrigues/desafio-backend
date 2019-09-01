@@ -1,0 +1,26 @@
+import fs from 'fs';
+
+const database = 'C:/cubos/desafio-backend/src/database/database.json';
+
+let rawData;
+
+class DatabaseAccess {
+
+    openConnection() {
+        rawData = fs.readFileSync(database);
+        return JSON.parse(rawData.toString());
+    }
+
+    commitChanges(schedules) {
+        rawData = JSON.stringify(schedules, null, 4);
+        fs.writeFile(database, rawData, finished);
+
+        function finished(err) {
+            console.log('new schedule rule created');
+            return schedules;
+        }
+    }
+    
+}
+
+export default new DatabaseAccess();

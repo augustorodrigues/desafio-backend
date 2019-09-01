@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-29T00:00:00.000Z",
+            "2019-08-31T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "10:00",
+                "end": "10:30"
+            },
+            {
+                "start": "14:00",
+                "end": "15:00"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-29T00:00:00.000Z",
+            "2019-08-31T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "10:00",
+                "end": "10:30"
+            },
+            {
+                "start": "14:00",
+                "end": "15:00"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-29T00:00:00.000Z",
+            "2019-08-31T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "10:00",
+                "end": "10:30"
+            },
+            {
+                "start": "14:00",
+                "end": "15:00"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-29T00:00:00.000Z",
+            "2019-08-31T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "10:00",
+                "end": "10:30"
+            },
+            {
+                "start": "14:00",
+                "end": "15:00"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-29T00:00:00.000Z",
+            "2019-08-31T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "10:00",
+                "end": "10:30"
+            },
+            {
+                "start": "14:00",
+                "end": "15:00"
+            }
+        ]
+    }
+]

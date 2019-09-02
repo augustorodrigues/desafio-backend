@@ -47,7 +47,7 @@ yarn global apidoc
 ```bash
 apidoc -f routes.ts -o public/apidoc
 ```
-Com o projeto em execução, explore a documentação da api no path 'http://localhost:3000/apidoc'.
+Com o projeto em execução, explore a documentação da api no endereço http://localhost:3000/apidoc.
 
 ## Execução
 

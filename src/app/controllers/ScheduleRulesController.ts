@@ -18,12 +18,6 @@ class ScheduleRuleController {
         return res.json(schedules);
     }
 
-    findOne(req, res) {
-        //rawData = fs.readFileSync(database);
-        //schedules = JSON.parse(rawData.toString());
-
-    }
-
     findFilterDates(req, res) {
         let startDate = req.body.startDate;
         let endDate = req.body.endDate;

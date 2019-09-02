@@ -16,7 +16,6 @@ class DatabaseAccess {
         fs.writeFile(database, rawData, finished);
 
         function finished(err) {
-            console.log('new schedule rule created');
             return schedules;
         }
     }

@@ -40,10 +40,9 @@ class Interval {
             });
         });
 
-
-
         return availableHours;
     }
+    
 }
 
 export default Interval;

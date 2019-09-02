@@ -10,7 +10,6 @@ class ScheduleRuleController {
 
     findAll(req, res) {
         schedules = databaseConnection.openConnection();
-        //console.log(schedules.length);
         return res.json(schedules);
     }
 

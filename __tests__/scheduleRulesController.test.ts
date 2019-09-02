@@ -31,8 +31,8 @@ describe('ScheduleRulesController', () => {
                 ],
                 intervals: [
                     {
-                        "start": "11:01",
-                        "end": "12:00"
+                        "start": "10:00",
+                        "end": "11:00"
                     }
                 ]
             });

@@ -3,12 +3,13 @@ import databaseConnection from '../../database/DatabaseAccess';
 export default (req, res, next) => {
 
     let schedules = databaseConnection.openConnection();
+    let id = parseInt(req.params.id);
 
-    schedules.map(s => {
-        if (s.id === req.params.id) {
+    for (let s of schedules) {
+        if (s.id == id) {
             return next();
         }
-    });
+    }
 
-    return res.send(400).json({error: 'Schedule rule not found'});
+    return res.status(400).json({ error: 'Schedule rule not found' });
 }

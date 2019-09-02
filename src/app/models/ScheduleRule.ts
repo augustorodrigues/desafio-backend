@@ -1,12 +1,12 @@
 import ScheduleRuleTypesEnum from "../enums/ScheduleRuleTypesEnum";
-import Intervals from "./Intervals";
+import Interval from "./Interval";
 
 class ScheduleRule {
     id: number = null;
     ruleType: string = "";
     days: Array<Date> = [];
     weekdays: Array<string> = [];
-    intervals: Array<Intervals> = [];
+    intervals: Array<Interval> = [];
 
     verify(scheduleRule) : boolean {
         let res = true;

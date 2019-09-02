@@ -1,8 +1,11 @@
 import { Router } from 'express';
 import ScheduleRule from './app/models/ScheduleRule';
 import ScheduleRuleController from './app/controllers/ScheduleRulesController';
-import validateScheduleRule from './app/middlewares/ValidateScheduleRule';
-import validadeScheduleExists from './app/middlewares/ValidadeScheduleRuleExists';
+import ValidateScheduleRule from './app/middlewares/ValidateScheduleRule';
+import ValidadeScheduleExists from './app/middlewares/ValidadeScheduleRuleExists';
+import ValidateInterval from './app/middlewares/ValidateInterval';
+import ValidateDates from './app/middlewares/ValidadeDates'
+
 
 const routes = Router();
 const database = 'C:/cubos/desafio-backend/src/database/database.json';
@@ -11,12 +14,12 @@ const database = 'C:/cubos/desafio-backend/src/database/database.json';
 routes.get('/rules', ScheduleRuleController.findAll);
 
 // filterDates
-routes.get('rules/:startDate/:endDate', ScheduleRuleController.findFilterDates);
+routes.post('/rules/availableHours', ValidateDates, ScheduleRuleController.findFilterDates);
 
 // save
-routes.post('/rules', validateScheduleRule, ScheduleRuleController.save);
+routes.post('/rules', ValidateScheduleRule, ValidateInterval, ScheduleRuleController.save);
 
 // delete
-routes.delete('/rules/:id', validadeScheduleExists, ScheduleRuleController.delete);
+routes.delete('/rules/:id', ValidadeScheduleExists, ScheduleRuleController.delete);
 
 export default routes;

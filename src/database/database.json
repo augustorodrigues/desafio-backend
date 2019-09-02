@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 6,
         "ruleType": "DAILY",
         "days": [
             "2019-08-29T00:00:00.000Z",
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": 7,
         "ruleType": "DAILY",
         "days": [
             "2019-08-29T00:00:00.000Z",
@@ -44,51 +44,7 @@
         ]
     },
     {
-        "id": 3,
-        "ruleType": "DAILY",
-        "days": [
-            "2019-08-29T00:00:00.000Z",
-            "2019-08-31T00:00:00.000Z"
-        ],
-        "weekdays": [
-            "SEGUNDA-FEIRA",
-            "QUARTA-FEIRA"
-        ],
-        "intervals": [
-            {
-                "start": "10:00",
-                "end": "10:30"
-            },
-            {
-                "start": "14:00",
-                "end": "15:00"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "ruleType": "DAILY",
-        "days": [
-            "2019-08-29T00:00:00.000Z",
-            "2019-08-31T00:00:00.000Z"
-        ],
-        "weekdays": [
-            "SEGUNDA-FEIRA",
-            "QUARTA-FEIRA"
-        ],
-        "intervals": [
-            {
-                "start": "10:00",
-                "end": "10:30"
-            },
-            {
-                "start": "14:00",
-                "end": "15:00"
-            }
-        ]
-    },
-    {
-        "id": 5,
+        "id": 8,
         "ruleType": "DAILY",
         "days": [
             "2019-08-29T00:00:00.000Z",

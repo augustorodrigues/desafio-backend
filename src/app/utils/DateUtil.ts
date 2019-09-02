@@ -19,6 +19,17 @@ class DateUtil {
         return false;
     }
 
+    formatSchedulesDates(schedules) {
+        let day;
+        schedules.map(s => {
+            for (let i = 0; i < s.days.length; i++) {
+                day = new Date(s.days[i])
+                s.days[i] =  this.formatDate(day.getTime() + 10800000);
+            }
+        });
+        return schedules;
+    }
+
 }
 
 export default DateUtil;

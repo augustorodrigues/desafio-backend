@@ -3,6 +3,7 @@ import fs from 'fs';
 import databaseConnection from '../../database/DatabaseAccess';
 import Interval from '../models/Interval';
 import AvailableHours from '../models/AvailableHours';
+import DateUtil from '../utils/DateUtil';
 
 let schedules;
 
@@ -10,6 +11,10 @@ class ScheduleRuleController {
 
     findAll(req, res) {
         schedules = databaseConnection.openConnection();
+        let dateUtil = new DateUtil();
+
+        schedules = dateUtil.formatSchedulesDates(schedules);
+
         return res.json(schedules);
     }
 
@@ -29,8 +34,6 @@ class ScheduleRuleController {
         availableHours = interval.filterDates(startDate, endDate, schedules);
 
         return res.status(200).json({ availableHours });
-
-
     }
 
     save(req, res) {

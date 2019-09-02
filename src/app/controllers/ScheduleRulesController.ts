@@ -1,5 +1,4 @@
 import ScheduleRule from '../models/ScheduleRule';
-import fs from 'fs';
 import databaseConnection from '../../database/DatabaseAccess';
 import Interval from '../models/Interval';
 import AvailableHours from '../models/AvailableHours';

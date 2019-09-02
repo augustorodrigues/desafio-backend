@@ -14,12 +14,10 @@ describe('ScheduleRulesController', () => {
             .send();
 
         expect(response.body).toStrictEqual(schedules);
+        expect(response.status).toEqual(200);
     });
 
     it('should be able to save one new schedule rules', async () => {
-        let dateUtil = new DateUtil();
-        let schedules = databaseConnection.openConnection();
-        schedules = dateUtil.formatSchedulesDates(schedules);
         const response = await request(app)
             .post('/rules')
             .send({
@@ -36,10 +34,26 @@ describe('ScheduleRulesController', () => {
                     }
                 ]
             });
-
         expect(response.body).toHaveProperty('id');
+        expect(response.status).toEqual(200);
     });
 
-    
+    it('should be able to get all schedule rules between two dates', async () => {
+        const response = await request(app)
+            .post('/rules/availableHours')
+            .send({
+                startDate: "2019-08-25",
+                endDate: "2019-08-31"
+            });
+        expect(response.status).toEqual(200);
+    });
 
+    it('should be able to delete one schedule rules', async () => {
+        
+        const response = await request(app)
+            .delete('/rules/1')
+            .send();
+
+        expect(response.status).toEqual(200);
+    });
 });

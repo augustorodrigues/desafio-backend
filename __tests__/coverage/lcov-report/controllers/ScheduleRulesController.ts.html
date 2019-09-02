@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60.53% </span>
+        <span class="strong">57.89% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>23/38</span>
+        <span class='fraction'>22/38</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/6</span>
+        <span class='fraction'>3/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>3/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">53.13% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/32</span>
+        <span class='fraction'>16/32</span>
       </div>
     </div>
     <p class="quiet">
@@ -127,28 +127,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,29 +187,29 @@ class ScheduleRuleController {
         return res.json(schedules);
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    fi</span>ndFilterDates(req, res) {
-        let startDate = <span class="cstat-no" title="statement not covered" >req.body.startDate;</span>
-        let endDate = <span class="cstat-no" title="statement not covered" >req.body.endDate;</span>
-        let interval = <span class="cstat-no" title="statement not covered" >new Interval();</span>
-        let availableHours = <span class="cstat-no" title="statement not covered" >Array&lt;Av</span>ailableHours&gt;();
+    findFilterDates(req, res) {
+        let startDate = req.body.startDate;
+        let endDate = req.body.endDate;
+        let interval = new Interval();
+        let availableHours = Array&lt;AvailableHours&gt;();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        schedules = databaseConnection.openConnection();</span>
-<span class="cstat-no" title="statement not covered" >        availableHours = interval.filterDates(startDate, endDate, schedules);</span>
+        schedules = databaseConnection.openConnection();
+        availableHours = interval.filterDates(startDate, endDate, schedules);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return res.status(200).json({ availableHours });</span>
+        return res.status(200).json({ availableHours });
     }
 &nbsp;
-    save(req, res) {
-        let scheduleRule = new ScheduleRule();
+<span class="fstat-no" title="function not covered" >    sa</span>ve(req, res) {
+        let scheduleRule = <span class="cstat-no" title="statement not covered" >new ScheduleRule();</span>
 &nbsp;
-        scheduleRule = scheduleRule.create(req.body);
+<span class="cstat-no" title="statement not covered" >        scheduleRule = scheduleRule.create(req.body);</span>
 &nbsp;
-        <span class="missing-if-branch" title="else path not taken" >E</span>if (scheduleRule) {
-            schedules = databaseConnection.openConnection();
-            scheduleRule = scheduleRule.setId(scheduleRule, schedules);
-            schedules.push(scheduleRule);
-            databaseConnection.commitChanges(schedules);
-            return res.json(scheduleRule);
+<span class="cstat-no" title="statement not covered" >        if (scheduleRule) {</span>
+<span class="cstat-no" title="statement not covered" >            schedules = databaseConnection.openConnection();</span>
+<span class="cstat-no" title="statement not covered" >            scheduleRule = scheduleRule.setId(scheduleRule, schedules);</span>
+<span class="cstat-no" title="statement not covered" >            schedules.push(scheduleRule);</span>
+<span class="cstat-no" title="statement not covered" >            databaseConnection.commitChanges(schedules);</span>
+<span class="cstat-no" title="statement not covered" >            return res.json(scheduleRule);</span>
         } else {
 <span class="cstat-no" title="statement not covered" >            return res.status(400).json({ error: 'All fields must to be set' });</span>
         }
@@ -235,7 +235,7 @@ export default new ScheduleRuleController();</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 02 2019 01:54:01 GMT-0300 (GMT-03:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 02 2019 02:11:01 GMT-0300 (GMT-03:00)
 </div>
 </div>
 <script src="..\prettify.js"></script>

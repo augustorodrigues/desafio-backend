@@ -1,39 +1,5 @@
 [
     {
-        "id": 1,
-        "ruleType": "DAILY",
-        "days": [
-            "2019-08-20T00:00:00.000Z"
-        ],
-        "weekdays": [
-            "SEGUNDA-FEIRA",
-            "QUARTA-FEIRA"
-        ],
-        "intervals": [
-            {
-                "start": "08:19",
-                "end": "09:30"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "ruleType": "DAILY",
-        "days": [
-            "2019-08-20T00:00:00.000Z"
-        ],
-        "weekdays": [
-            "SEGUNDA-FEIRA",
-            "QUARTA-FEIRA"
-        ],
-        "intervals": [
-            {
-                "start": "08:19",
-                "end": "09:30"
-            }
-        ]
-    },
-    {
         "id": 3,
         "ruleType": "DAILY",
         "days": [

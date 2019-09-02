@@ -11,8 +11,8 @@
         ],
         "intervals": [
             {
-                "start": "08:00",
-                "end": "09:01"
+                "start": "08:13",
+                "end": "09:00"
             }
         ]
     },
@@ -28,7 +28,24 @@
         ],
         "intervals": [
             {
-                "start": "08:00",
+                "start": "08:10",
+                "end": "09:00"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "ruleType": "DAILY",
+        "days": [
+            "2019-08-20T00:00:00.000Z"
+        ],
+        "weekdays": [
+            "SEGUNDA-FEIRA",
+            "QUARTA-FEIRA"
+        ],
+        "intervals": [
+            {
+                "start": "08:11",
                 "end": "09:00"
             }
         ]

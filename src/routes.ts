@@ -17,7 +17,7 @@ routes.get('/rules', ScheduleRuleController.findAll);
 routes.post('/rules/availableHours', ValidateDates, ScheduleRuleController.findFilterDates);
 
 // save
-routes.post('/rules', ValidateInterval, ScheduleRuleController.save);
+routes.post('/rules', ValidateScheduleRule, ValidateInterval, ScheduleRuleController.save);
 
 // delete
 routes.delete('/rules/:id', ValidadeScheduleExists, ScheduleRuleController.delete);

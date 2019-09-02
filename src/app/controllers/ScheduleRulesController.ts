@@ -46,7 +46,7 @@ class ScheduleRuleController {
             scheduleRule = scheduleRule.setId(scheduleRule, schedules);
             schedules.push(scheduleRule);
             databaseConnection.commitChanges(schedules);
-            return res.json(schedules);
+            return res.json(scheduleRule);
         } else {
             return res.status(400).json({ error: 'All fields must to be set' });
         }

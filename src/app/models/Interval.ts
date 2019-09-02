@@ -21,8 +21,7 @@ class Interval {
             schedule.days.map(day => {
                 day = new Date(day);
                 let dateToCompare = day.getTime();
-
-                //if (dayy >= startDate && dayy <= endDate) {
+                
                 if (dateUtil.compareBetweenDate(dateToCompare, startDate, endDate)) {
                     availableHour = new AvailableHours();
                     availableHour.day = dateUtil.formatDate(new Date(dateToCompare + 10800000));

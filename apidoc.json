@@ -1,0 +1,8 @@
+{
+    "name": "Schedule Rules API documentation",
+    "version": "1.0.0",
+    "description": "API schedule rules list manager",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

@@ -54,7 +54,7 @@ class ScheduleRuleController {
         let element = schedules.findIndex(checkEqual);
         schedules.splice(element, 1);
         databaseConnection.commitChanges(schedules);
-        return res.status(200).json();
+        return res.status(204).json();
     }
     
 }

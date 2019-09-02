@@ -1,4 +1,3 @@
-import ScheduleRuleTypesEnum from "../enums/ScheduleRuleTypesEnum";
 import Interval from "./Interval";
 
 class ScheduleRule {

@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const database = 'C:/cubos/desafio-backend/src/database/database.json';
+const database = './database.json';
 
 let rawData;
 

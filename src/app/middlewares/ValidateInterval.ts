@@ -1,4 +1,4 @@
-import databaseConnection from "../../database/databaseAccess"
+import databaseConnection from "../../database/DatabaseAccess"
 
 export default (req, res, next) => {
 

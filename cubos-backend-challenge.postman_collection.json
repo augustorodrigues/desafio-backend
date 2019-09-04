@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "ab11d284-6155-40ce-a7d9-f70717caab59",
+		"name": "Cubos backend challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new Schedule Rule Daily Type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruleType\": \"DAILY\",\r\n    \"days\": [],\r\n    \"weekdays\": [\r\n        \"SEGUNDA-FEIRA\",\r\n        \"QUARTA-FEIRA\"\r\n    ],\r\n    \"intervals\": [\r\n    \t{\r\n\t    \t\"start\": \"08:00\",\r\n\t    \t\"end\": \"09:00\"\r\n\t\t}\r\n\t]\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "This request create a new schedule rule."
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Schedule Rule Specific Date Type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruleType\": \"SPECIFIC_DATE\",\r\n    \"days\": [\"2019-09-27\"],\r\n    \"weekdays\": [],\r\n    \"intervals\": [\r\n    \t{\r\n\t    \t\"start\": \"08:00\",\r\n\t    \t\"end\": \"09:00\"\r\n\t\t}\r\n\t]\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "This request create a new schedule rule."
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Schedule Rule Weekly Type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruleType\": \"WEEKLY\",\r\n    \"days\": [],\r\n    \"weekdays\": [],\r\n    \"intervals\": [\r\n    \t{\r\n\t    \t\"start\": \"08:00\",\r\n\t    \t\"end\": \"09:00\"\r\n\t\t}\r\n\t]\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "This request create a new schedule rule."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Schedules Rules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Available Hours by Start and End Dates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\": \"2019-08-29\", \n\t\"endDate\": \"2019-08-30\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rules/availableHours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules",
+						"availableHours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove One Schedule Rule",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rules/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

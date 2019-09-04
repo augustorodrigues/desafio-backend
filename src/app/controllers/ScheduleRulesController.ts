@@ -1,5 +1,4 @@
 import ScheduleRule from '../models/ScheduleRule';
-import fs from 'fs';
 import databaseConnection from '../../database/DatabaseAccess';
 import Interval from '../models/Interval';
 import AvailableHours from '../models/AvailableHours';
@@ -29,6 +28,12 @@ class ScheduleRuleController {
         return res.status(200).json({ availableHours });
     }
 
+    /**
+     * TODO: depends on the type of rule, days e weekdays must be empty.
+     * type WEEKLY dont need days and weekdays
+     * type DAILY must only have days values 
+     * type SPECIFIC_DATE dont need weekly values
+     */
     save(req, res) {
         let scheduleRule = new ScheduleRule();
 

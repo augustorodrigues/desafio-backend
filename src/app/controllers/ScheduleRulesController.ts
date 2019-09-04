@@ -9,9 +9,8 @@ let schedules;
 class ScheduleRuleController {
 
     findAll(req, res) {
-        schedules = databaseConnection.openConnection();
         let dateUtil = new DateUtil();
-
+        schedules = databaseConnection.openConnection();
         schedules = dateUtil.formatSchedulesDates(schedules);
 
         return res.json(schedules);

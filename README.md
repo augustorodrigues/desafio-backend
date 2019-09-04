@@ -33,7 +33,7 @@ yarn watch-ts
 yarn watch-node
 ```
 
-Para rodar os testes faça checkout na branch 'tests' e execute o script:
+Para rodar os testes execute o script:
 
 ```bash
 yarn test

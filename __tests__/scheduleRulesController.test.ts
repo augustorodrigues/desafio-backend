@@ -54,6 +54,6 @@ describe('ScheduleRulesController', () => {
             .delete('/rules/1')
             .send();
 
-        expect(response.status).toEqual(200);
+        expect(response.status).toEqual(204);
     });
 });

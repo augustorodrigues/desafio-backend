@@ -3,6 +3,10 @@
 - José Augusto Santos Rodrigues
 - jrodriguesaugusto@gmail.com
 
+## Descrição
+
+Neste desafio o ponto chave era a não utilização de banco de dados para realização das ações dos endpoints, os dados deveriam ser gravados em um arquivo com extensão JSON que faria o papel de banco de dados da aplicação. Dessa forma a lógica de CRUD para banco de dados teve que ser implementada. A API é responsável por cadastrar regras de marcação de horários em uma clínica, existem três categorias de regras e foram implementadas apenas algumas das verificações necessárias com objetivo na avaliação do desafio.
+
 ## Bibliotecas, linguagem e Frameworks Utilizados
 
 - Node.js
@@ -12,6 +16,8 @@
 - Apidoc
 
 ## Build, Testes e Documentação
+
+O caminho para o arquivo database.json deve ser atualizado para corresponder ao seu caminho local quando for feito um clone do projeto.
 
 Para instalar as dependências do projeto utilize um dos compandos a baixo:
 

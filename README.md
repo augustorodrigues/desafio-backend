@@ -3,7 +3,7 @@
 - José Augusto Santos Rodrigues
 - jrodriguesaugusto@gmail.com
 
-## Bibliotecas, linguagem e Frameworks Uutilizados
+## Bibliotecas, linguagem e Frameworks Utilizados
 
 - Node.js
 - Express

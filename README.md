@@ -1,7 +1,7 @@
 # API para Gerenciamento de Horários de Clínica
 
 - José Augusto Santos Rodrigues
-- jrodriguesaugusto@gmail.com
+- https://www.linkedin.com/in/augusto-rodrigues/
 
 ## Descrição
 
